@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
 const pageTitle = "Tri Hermes";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>Astro Edition</h2>
-  <p>Sry about the cringe, just following the <a href="https://docs.astro.build/en/tutorial">Astro Blog tutoria</a> so I get more familiar with the framework....</p>
+  <p>Sry about the cringe, just following the <a href="https://docs.astro.build/en/tutorial">Astro Blog tutorial</a> so I get more familiar with the framework....</p>
+
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
